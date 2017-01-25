@@ -15,11 +15,28 @@
       height: 100%;
     }
     
-    .calc {
+    .h1 {
+      color: red;
+    }
+    
+    .buttons {
         height: 480px;
-        width: 120px;
+        width: 420px;
         background-color: blue;
     }
+    
+    .button {
+      width: 34px;
+      height: 34px;
+      padding: 0px;
+    }
+    
+    .rows {
+        position: absolute;
+    }
+    
+    
+    
     
     /* Set black background color, white text and some padding */
     footer {
