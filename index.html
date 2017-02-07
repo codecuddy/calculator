@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+   
  <!--- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 </head>
@@ -47,7 +48,8 @@
     <div class="container">
       <div class="buttons">
         <div class="row rows">
-          <div class="screen">blank</div>
+          <div id="screen" class="screen">
+          </div>
         </div>
         <div class="row rows">
           <button id="clearAll" class="button">AC</button>
@@ -71,7 +73,7 @@
         </div>
       
         <div class="row rows">
-          <button id="one" class="button">1</button>
+          <button onclick="someFunction()" id="one" class="button">1</button>
           <button id="two" class="button">2</button>
           <button id="three" class="button">3</button>
           <button id="plus" class="button">+</button>
@@ -88,8 +90,10 @@
 
 
 <footer>
-  <p>Footer Text</p>
+  <p>&#169 <a href="https://github.com/codecuddy">Charlie Cuddy</a></p>
 </footer>
+
+ <script type="text/javascript" src="script.js"></script>
 
 </body>
 </html>
