@@ -15,24 +15,52 @@
       height: 100%;
     }
     
-    .h1 {
+    
+    .jumbotron {
+      background-color: gold;
+    }
+    
+    h1 {
       color: red;
     }
     
+    .screen {
+      background: silver;
+      width: 136px;
+      height: 34px;
+      border: solid black 1px;
+      text-align: right;
+      border-radius: 4px;
+      color: black;
+    }
+    
     .buttons {
-        height: 480px;
-        width: 420px;
-        background-color: blue;
+      height: 480px;
+      width: 420px;
+      margin: auto;
+      background-color: green;
+      border-radius: 5px;
     }
     
     .button {
       width: 34px;
       height: 34px;
       padding: 0px;
+      border-radius: 4px;
+      border: solid black 1px;
+    }
+    
+    #equalButton {
+      width: 68px;
+      height: 34px;
+      padding: 0px;
+      border-radius: 4px;
+      border: solid black 1px;
     }
     
     .rows {
-        position: absolute;
+        display: flex;
+        
     }
     
     
