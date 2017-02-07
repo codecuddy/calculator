@@ -4,24 +4,33 @@
       margin-bottom: 0;
       border-radius: 0;
     }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    /*
+     Set height of the grid so .sidenav can be 100% (adjust as needed) 
     .row.content {height: 450px}
     
-    /* Set gray background color and 100% height */
+     Set gray background color and 100% height 
     .sidenav {
       padding-top: 20px;
       background-color: #f1f1f1;
       height: 100%;
-    }
-    
+    } */
     
     .jumbotron {
-      background-color: gold;
+      background-color: green;
+      
     }
     
-    h1 {
-      color: red;
+    .container {
+      width: 150px;
+      height: 210px;
+      margin: 5px;
+      text-align: center;
+      margin: auto;
+    }
+    
+    
+    .headline {
+      text-align: center;
     }
     
     .screen {
@@ -32,13 +41,11 @@
       text-align: right;
       border-radius: 4px;
       color: black;
+      padding: 6px 0;
     }
     
     .buttons {
-      height: 480px;
-      width: 420px;
-      margin: auto;
-      background-color: green;
+      background-color: yellow;
       border-radius: 5px;
     }
     
@@ -60,6 +67,8 @@
     
     .rows {
         display: flex;
+        justify-content: center;
+        align-items: center;
         
     }
     
