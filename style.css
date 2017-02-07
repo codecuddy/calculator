@@ -16,13 +16,12 @@
     } */
     
     .jumbotron {
-      background-color: green;
-      
+      background-color: darkgreen;
+      margin: 0;
     }
     
     .container {
-      width: 150px;
-      height: 210px;
+      height: 100vh;
       margin: 5px;
       text-align: center;
       margin: auto;
@@ -36,7 +35,7 @@
     .screen {
       background: silver;
       width: 136px;
-      height: 34px;
+      
       border: solid black 1px;
       text-align: right;
       margin: 2px 2px;
