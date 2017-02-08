@@ -1,13 +1,11 @@
 var numbers = {
     displayZero: function() {
     var button = document.getElementById("zero").value;
-    //var displayScreen = document.getElementById("screen").value = button;
     document.getElementById("screen").innerHTML = button;
     },
     
     displayOne: function() {
     var button = document.getElementById("one").value;
-    //var displayScreen = document.getElementById("screen").value = button;
     document.getElementById("screen").innerHTML = button;
     },
     
@@ -50,10 +48,53 @@ var numbers = {
     var button = document.getElementById("nine").value;
     document.getElementById("screen").innerHTML = button;
     },
+    
+    displayDecimal: function() {
+    var button = document.getElementById("decimal").value;
+    document.getElementById("screen").innerHTML = button;
+    }
 };
 
 
 var operators = {
+    clearAll: function() {
+    var button = document.getElementById("clearAll").value;
+    document.getElementById("screen").innerHTML = button;
+    },
     
+    plusMinus: function() {
+    var button = document.getElementById("plusMinus").value;
+    document.getElementById("screen").innerHTML = button;
+    },
+    
+    percent: function() {
+    var button = document.getElementById("percent").value;
+    document.getElementById("screen").innerHTML = button;
+    },
+    
+    divide: function() {
+    var button = document.getElementById("divide").value;
+    document.getElementById("screen").innerHTML = button;
+    },
+    
+    multiply: function() {
+    var button = document.getElementById("multiply").value;
+    document.getElementById("screen").innerHTML = button;
+    },
+    
+    minus: function() {
+    var button = document.getElementById("minus").value;
+    document.getElementById("screen").innerHTML = button;
+    },
+    
+    add: function() {
+    var button = document.getElementById("add").value;
+    document.getElementById("screen").innerHTML = button;
+    },
+    
+    equal: function() {
+    var button = document.getElementById("equal").value;
+    document.getElementById("screen").innerHTML = button;
+    }
 }
 
