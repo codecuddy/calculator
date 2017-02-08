@@ -20,6 +20,8 @@
       margin: 0;
     }
     
+    
+    
     .container {
       height: 60vh;
       margin: 5px;
@@ -30,6 +32,7 @@
     
     .headline {
       text-align: center;
+      color: yellow;
     }
     
     .screen {

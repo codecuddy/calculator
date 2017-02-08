@@ -37,52 +37,46 @@
   </div>
 </nav>
 
-
-
-
-
-
   <div class="jumbotron">
     <h1 class="headline">Math Machine</h1>      
     
     <div class="container">
       <div class="buttons">
         <div class="row rows">
-          <div id="screen" class="screen">
-          </div>
+          <div id="screen" class="screen"></div>
         </div>
         <div class="row rows">
-          <button id="clearAll" class="button">AC</button>
-          <button id="plusMinus" class="button">+/-</button>
-          <button id="percent" class="button">%</button>
-          <button id="divide" class="button">/</button>
-        </div>
-      
-        <div class="row rows">
-          <button id="seven" class="button">7</button>
-          <button id="eight" class="button">8</button>
-          <button id="nine" class="button">9</button>
-          <button id="multiply" class="button">x</button>
+          <button value=" " onclick="" id="clearAll" class="button">AC</button>
+          <button value=" " onclick="" id="plusMinus" class="button">+/-</button>
+          <button value="%" onclick="" id="percent" class="button">%</button>
+          <button value="/" onclick="" id="divide" class="button">/</button>
         </div>
       
         <div class="row rows">
-          <button id="four" class="button">4</button>
-          <button id="five" class="button">5</button>
-          <button id="six" class="button">6</button>
-          <button id="minus" class="button">-</button>
+          <button value="7" onclick="numbers.displaySeven()" id="seven" class="button">7</button>
+          <button value="8" onclick="numbers.displayEight()" id="eight" class="button">8</button>
+          <button value="9" onclick="numbers.displayNine()" id="nine" class="button">9</button>
+          <button value="*" onclick="" id="multiply" class="button">x</button>
         </div>
       
         <div class="row rows">
-          <button onclick="someFunction()" id="one" class="button">1</button>
-          <button id="two" class="button">2</button>
-          <button id="three" class="button">3</button>
-          <button id="plus" class="button">+</button>
+          <button value="4" onclick="numbers.displayFour()" id="four" class="button">4</button>
+          <button value="5" onclick="numbers.displayFive()" id="five" class="button">5</button>
+          <button value="6" onclick="numbers.displaySix()" id="six" class="button">6</button>
+          <button value="-" onclick="" id="minus" class="button">-</button>
         </div>
       
         <div class="row rows">
-          <button id="zero" class="button">0</button>
-          <button id="decimal" class="button">.</button>
-          <button id="equal" class="equalButton">=</button>
+          <button value="1" onclick="numbers.displayOne()" id="one" class="button">1</button>
+          <button value="2" onclick="numbers.displayTwo()" id="two" class="button">2</button>
+          <button value="3" onclick="numbers.displayThree()" id="three" class="button">3</button>
+          <button value="+" onclick="" id="plus" class="button">+</button>
+        </div>
+      
+        <div class="row rows">
+          <button value="0" onclick="numbers.displayZero()" id="zero" class="button">0</button>
+          <button value="." onclick="" id="decimal" class="button">.</button>
+          <button value="=" onclick="" id="equal" class="equalButton">=</button>
         </div>
       </div>
     </div>
@@ -93,7 +87,7 @@
   <p>&#169 <a href="https://github.com/codecuddy">Charlie Cuddy</a></p>
 </footer>
 
- <script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="script.js"></script>
 
 </body>
 </html>
