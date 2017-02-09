@@ -12,10 +12,9 @@ var display = pushButton("#screen"),
     currentNumber = "",
     previousNumber = "",
     answer,
-    magic;
+    doMath;
     
 //Enter the first number 
-
 var setNumber = function() {
     if (answer) {
         currentNumber = this.getAttribute("data-number");
@@ -24,19 +23,66 @@ var setNumber = function() {
         currentNumber += this.getAttribute("data-number");
     }
     
-    display.innerHTML = currentNumber.substr(0, 15);
+    display.innerHTML = currentNumber.substr(0, 14);
 };
 
 
-//Click button to enter
+//Click button to enter number
 for (var i = 0, j = numbers.length; i < j; i++) {
     numbers[i].onclick = setNumber;
 }
 
 
+// Save number when you click operator
+var saveNumber = function() {
+    previousNumber = currentNumber;
+    currentNumber = "";
+    doMath = this.getAttribute("data-operations");
+    
+    equals.setAttribute("data-answer","");
+};
+
+//Click operator button to do math
+for (var i = 0, j = operators.length; i < j; i++) {
+    operators[i].onclick = saveNumber;
+}
+
+// Calculate answer when equals is entered
+var mathAnswer = function() {
+    previousNumber = parseFloat(previousNumber);
+    currentNumber = parseFloat(currentNumber);
+    
+    switch(doMath) {
+        case "add":
+            answer = previousNumber + currentNumber;
+            break;
+            
+        case "subtract":
+            answer = previousNumber - currentNumber;
+            break;
+            
+        case "divide":
+            answer = previousNumber / currentNumber;
+            break;
+            
+        case "multiply":
+            answer = previousNumber * currentNumber;
+            break;
+            
+        default:
+            answer = currentNumber;
+    }
+  
+    display.innerHTML = answer;
+    equals.setAttribute("data-answer", answer);
+
+    previousNumber = 0;
+    currentNumber = answer;  
+};
 
 
 
+equals.onclick = mathAnswer;
 
 /*
 var numbers = {
@@ -54,7 +100,7 @@ var numbers = {
     
     displayTwo: function() {
     var button = document.getElementById("two").value;
-    document.getElementById("screen").innerHTML = button;
+    document.getElementById("screen").innerHTML = button;""
     },
     
     displayThree: function() {
