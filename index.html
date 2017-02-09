@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<!--<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       
@@ -30,12 +30,12 @@
         <li><a href="#">Link1</a></li>
         <li><a href="#">Link2</a></li>
       </ul>
-      <!-- <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul> -->
+      </ul> 
     </div>
   </div>
-</nav>
+</nav> -->
 
   <div class="jumbotron">
     <h1 class="headline">Math Machine</h1>      
@@ -43,49 +43,49 @@
     <div class="container">
       <div class="buttons">
         <div class="row rows">
-          <div id="screen" class="screen"></div>
+          <div id="screen" class="screen">0</div>
         </div>
         <div class="row rows">
-          <button value=" " onclick="operators.clearAll()" id="clearAll" class="button">AC</button>
-          <button value="-" onclick="operators.plusMinus()" id="plusMinus" class="button">+/-</button>
-          <button value="%" onclick="operators.percent()" id="percent" class="button">%</button>
-          <button value="/" onclick="operators.divide()" id="divide" class="button">/</button>
-        </div>
-      
-        <div class="row rows">
-          <button value="7" onclick="numbers.displaySeven()" id="seven" class="button">7</button>
-          <button value="8" onclick="numbers.displayEight()" id="eight" class="button">8</button>
-          <button value="9" onclick="numbers.displayNine()" id="nine" class="button">9</button>
-          <button value="*" onclick="operators.multiply()" id="multiply" class="button">x</button>
+          <button id="clearAll" class="clearAll">AC</button>
+          <button data-operations="-" id="plusMinus" class="operations">+/-</button>
+          <button data-operations="%" id="percent" class="operations">%</button>
+          <button data-operations="divided by" id="divide" class="operations">/</button>
         </div>
       
         <div class="row rows">
-          <button value="4" onclick="numbers.displayFour()" id="four" class="button">4</button>
-          <button value="5" onclick="numbers.displayFive()" id="five" class="button">5</button>
-          <button value="6" onclick="numbers.displaySix()" id="six" class="button">6</button>
-          <button value="-" onclick="operators.minus()" id="minus" class="button">-</button>
+          <button data-number="7" id="seven" class="button">7</button>
+          <button data-number="8" id="eight" class="button">8</button>
+          <button data-number="9" id="nine" class="button">9</button>
+          <button data-operations="times" id="multiply" class="operations">x</button>
         </div>
       
         <div class="row rows">
-          <button value="1" onclick="numbers.displayOne()" id="one" class="button">1</button>
-          <button value="2" onclick="numbers.displayTwo()" id="two" class="button">2</button>
-          <button value="3" onclick="numbers.displayThree()" id="three" class="button">3</button>
-          <button value="+" onclick="operators.add()" id="add" class="button">+</button>
+          <button data-number="4" id="four" class="button">4</button>
+          <button data-number="5" id="five" class="button">5</button>
+          <button data-number="6" id="six" class="button">6</button>
+          <button data-operations="minus" id="minus" class="operations">-</button>
         </div>
       
         <div class="row rows">
-          <button value="0" onclick="numbers.displayZero()" id="zero" class="button">0</button>
-          <button value="." onclick="numbers.displayDecimal()" id="decimal" class="button">.</button>
-          <button value="=" onclick="operators.equal()" id="equal" class="equalButton">=</button>
+          <button data-number="1" id="one" class="button">1</button>
+          <button data-number="2" id="two" class="button">2</button>
+          <button data-number="3" id="three" class="button">3</button>
+          <button data-operations="plus" id="add" class="operations">+</button>
+        </div>
+      
+        <div class="row rows">
+          <button data-number="0" id="zero" class="button">0</button>
+          <button data-number="." id="decimal" class="button">.</button>
+          <button data-answer=" " id="equals" class="operations equals">=</button>
         </div>
       </div>
     </div>
   </div>
 
 
-<footer>
+<div class="footer">
   <p>&#169 <a href="https://github.com/codecuddy">Charlie Cuddy</a></p>
-</footer>
+</div>
 
 <script type="text/javascript" src="script.js"></script>
 

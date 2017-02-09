@@ -1,7 +1,61 @@
+var button = function(button) {
+    if (button.charAt(0) === "#") {
+        return document.querySelector(button);  // if it gets an id return that button
+    }
+        return document.querySelectorAll(button);   // Otherwise, return a list (???)
+    };
+
+var display = button("#screen"),
+    equals = button("#equals"),
+    numbers = button(".button"),
+    operators = button(".operations"),
+    currentNumber = "",
+    previousNumber = "",
+    answer,
+    magic;
+    
+var setNumber = function() {
+    if (answer) {
+        currentNumber = this.getAttribute("data-number");
+        answer = "";
+    } else {
+        currentNumber += this.getAttribute("data-number");
+    }
+    
+    display.innerHTML = currentNumber;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for (var i = 0, j = numbers.length; i < j; i++) {
+    numbers[i].onclick = setNumber;
+}
+
+
+
+
+
+
+/*
 var numbers = {
     displayZero: function() {
     var button = document.getElementById("zero").value;
-    document.getElementById("screen").innerHTML = button;
+    var display = document.getElementById("screen").innerHTML = button;
+    var entry = display.value;
+        
     },
     
     displayOne: function() {
@@ -98,3 +152,14 @@ var operators = {
     }
 }
 
+
+
+/*
+var display = {
+    displayScreen: function(buttons) {
+    var button = document.getElementById().value;
+    document.getElementById("screen").innerHTML = button;
+    }
+}
+
+*/
