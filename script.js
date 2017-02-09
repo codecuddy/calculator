@@ -1,19 +1,21 @@
-var button = function(button) {
+var pushButton = function(button) {
     if (button.charAt(0) === "#") {
         return document.querySelector(button);  // if it gets an id return that button
     }
         return document.querySelectorAll(button);   // Otherwise, return a list (???)
     };
 
-var display = button("#screen"),
-    equals = button("#equals"),
-    numbers = button(".button"),
-    operators = button(".operations"),
+var display = pushButton("#screen"),
+    equals = pushButton("#equals"),
+    numbers = pushButton(".button"),
+    operators = pushButton(".operations"),
     currentNumber = "",
     previousNumber = "",
     answer,
     magic;
     
+//Enter the first number 
+
 var setNumber = function() {
     if (answer) {
         currentNumber = this.getAttribute("data-number");
@@ -22,24 +24,11 @@ var setNumber = function() {
         currentNumber += this.getAttribute("data-number");
     }
     
-    display.innerHTML = currentNumber;
+    display.innerHTML = currentNumber.substr(0, 15);
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Click button to enter
 for (var i = 0, j = numbers.length; i < j; i++) {
     numbers[i].onclick = setNumber;
 }
