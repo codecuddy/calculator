@@ -9,10 +9,21 @@ var display = pushButton("#screen"),
     equals = pushButton("#equals"),
     numbers = pushButton(".button"),
     operators = pushButton(".operations"),
+    clearScreen = pushButton(".clearAll"),
     currentNumber = "",
     previousNumber = "",
     answer,
     doMath;
+    
+//Clear the display
+var clearAll = function() {
+    currentNumber = "";
+    previousNumber = "";
+    display.innerHTML = "0";
+    equals.setAttribute("data-answer", answer);
+};
+
+clearScreen.onclick = clearAll;
     
 //Enter the first number 
 var setNumber = function() {
@@ -69,6 +80,10 @@ var mathAnswer = function() {
             answer = previousNumber * currentNumber;
             break;
             
+        case "module":
+            answer = previousNumber % currentNumber;
+            break;
+            
         default:
             answer = currentNumber;
     }
@@ -83,6 +98,10 @@ var mathAnswer = function() {
 
 
 equals.onclick = mathAnswer;
+
+
+
+
 
 /*
 var numbers = {
