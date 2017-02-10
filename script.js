@@ -9,21 +9,21 @@ var display = pushButton("#screen"),
     equals = pushButton("#equals"),
     numbers = pushButton(".button"),
     operators = pushButton(".operations"),
-    clearScreen = pushButton(".clearAll"),
+    clearScreen = pushButton("#clear"),
     currentNumber = "",
     previousNumber = "",
     answer,
     doMath;
     
 //Clear the display
-var clearAll = function() {
+var clearEntry = function() {
     currentNumber = "";
     previousNumber = "";
     display.innerHTML = "0";
-    equals.setAttribute("data-answer", answer);
+    answer.setAttribute("data-answer", answer);
 };
 
-clearScreen.onclick = clearAll;
+clearScreen.onclick = clearEntry;
     
 //Enter the first number 
 var setNumber = function() {
@@ -94,7 +94,6 @@ var mathAnswer = function() {
     previousNumber = 0;
     currentNumber = answer;  
 };
-
 
 
 equals.onclick = mathAnswer;
