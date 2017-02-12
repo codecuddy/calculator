@@ -8,12 +8,15 @@ var pushButton = function(button) {
 var display = pushButton("#screen"),
     equals = pushButton("#equals"),
     percent = pushButton("#percent"),
+    plusMinus = pushButton("#plusMinus"),
     numbers = pushButton(".button"),
     operators = pushButton(".operations"),
     clearScreen = pushButton("#clear"),
     currentNumber = "",
     previousNumber = "",
     answer,
+    negativeNumber,
+    percentNumber,
     doMath;
     
 //Clear the display
@@ -21,13 +24,11 @@ var clearEntry = function() {
     currentNumber = "";
     previousNumber = "";
     display.innerHTML = "0";
-    answer.setAttribute("data-answer", answer);
 };
 
 clearScreen.onclick = clearEntry;
     
-    
-    
+
 //Enter the first number 
 var setNumber = function() {
     if (answer) {
@@ -58,12 +59,31 @@ var saveNumber = function() {
 
 
 
-
-
 //Click operator button to do math
 for (var i = 0, j = operators.length; i < j; i++) {
     operators[i].onclick = saveNumber;
 }
+
+
+//Allow positive and negative numbers
+var oppositeSign = function() {
+    negativeNumber = currentNumber * -1;
+    currentNumber = negativeNumber;
+    answer = currentNumber;
+    display.innerHTML = answer;
+}
+
+plusMinus.onclick = oppositeSign;
+
+
+var percentage = function() {
+    percentNumber = currentNumber / 100; 
+    currentNumber = percentNumber;
+    answer = percentNumber;
+    display.innerHTML = answer;
+}  
+
+percent.onclick = percentage;
 
 // Calculate answer when equals is entered
 var mathAnswer = function() {
@@ -87,12 +107,8 @@ var mathAnswer = function() {
             answer = previousNumber * currentNumber;
             break;
             
-        case "percentage":
-            answer = previousNumber / 100;
-            break;
-            
-        //case "plusMinus":
-        //    answer = previousNumber * -1;
+        //case "percentage":
+        //    answer = previousNumber / 100;
         //    break;
             
         default:

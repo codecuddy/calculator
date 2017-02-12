@@ -1,10 +1,10 @@
 
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    /* Remove the navbar's default margin-bottom and rounded borders  
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
-    /*
+    
      Set height of the grid so .sidenav can be 100% (adjust as needed) 
     .row.content {height: 450px}
     
@@ -17,6 +17,7 @@
     
     .jumbotron {
       background-color: #004400;
+      max-width: 100%;
       margin: 0;
       height: 92vh;
     }
@@ -24,6 +25,9 @@
     .container {
       height: 60vh;
       margin: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       
     }
@@ -175,8 +179,6 @@
       color: #006600;
       -webkit-text-stroke: 1px yellow;
       box-shadow: 0 2px #006600;
-      -ms-transform: translateY(2px);
-      -webkit-transform: translateY(2px);
       transform: translateY(2px);
     }
   }
