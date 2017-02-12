@@ -119,6 +119,14 @@ var mathAnswer = function() {
             answer = currentNumber;
     }
     
+    if (!isFinite(answer)) {
+      if (isNaN(answer)) { 
+        answer = "No, Try Again!";
+      } else { 
+        answer = "Can't Divide 0";
+      }
+    }
+    
     var stringAnswer;
     stringAnswer = answer.toString();
     display.innerHTML = stringAnswer.substr(0, 14);

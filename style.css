@@ -154,31 +154,7 @@
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
 
-      .button:active {
-      background-color: #006400;
-      color: #226600;
-      -webkit-text-stroke: 1px yellow;
-      box-shadow: 0 2px #006600;
-      -ms-transform: translateY(2px);
-      -webkit-transform: translateY(2px);
-      transform: translateY(2px);
-    }
-    
-    .operations:active {
-      background-color: #006400;
-      color: #006600;
-      -webkit-text-stroke: 1px yellow;
-      box-shadow: 0 2px #006600;
-      -ms-transform: translateY(2px);
-      -webkit-transform: translateY(2px);
-      transform: translateY(2px);
-    }
-    
-    .clear:active {
-      background-color: #006400;
-      color: #006600;
-      -webkit-text-stroke: 1px yellow;
-      box-shadow: 0 2px #006600;
-      transform: translateY(2px);
-    }
+  .operations:active {
+    background-color: blue;
+  }
   }
