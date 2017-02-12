@@ -70,7 +70,9 @@ var oppositeSign = function() {
     negativeNumber = currentNumber * -1;
     currentNumber = negativeNumber;
     answer = currentNumber;
-    display.innerHTML = answer;
+    var stringAnswer;
+    stringAnswer = answer.toString();
+    display.innerHTML = stringAnswer.substr(0, 14);
 };
 
 plusMinus.onclick = oppositeSign;
@@ -116,6 +118,7 @@ var mathAnswer = function() {
         default:
             answer = currentNumber;
     }
+    
     var stringAnswer;
     stringAnswer = answer.toString();
     display.innerHTML = stringAnswer.substr(0, 14);
