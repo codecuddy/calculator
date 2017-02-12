@@ -16,7 +16,7 @@
     } */
     
     .jumbotron {
-      background-color: darkgreen;
+      background-color: #004400;
       margin: 0;
       height: 92vh;
     }
@@ -29,8 +29,8 @@
     }
     
     .headline {
+      color: #e5e500 !important;
       text-align: center;
-      color: red;
     }
     
     .screen {
@@ -43,8 +43,8 @@
       border-radius: 4px;
       font-size: 28px;
       padding: 12px 5px;
-      background-color: darkgreen;
-      color: yellow;
+      background-color: #006400;
+      color: #e5e500;
     }
     
     .buttons {
@@ -60,10 +60,10 @@
       height: 60px;
       padding: 0px;
       border-radius: 4px;
-      border: solid black 1px;
+      border: solid yellow 1px;
       font-size: 32px;
-      background-color: darkgreen;
-      color: yellow;
+      background-color: #005500;
+      color: #e5e500;
     }
     
     .operations {
@@ -71,10 +71,10 @@
       height: 60px;
       padding: 0px;
       border-radius: 4px;
-      border: solid black 1px;
+      border: solid yellow 1px;
       font-size: 32px;
-      background-color: darkgreen;
-      color: yellow;
+      background-color: #005500;
+      color: #e5e500;
     }
     
     .clear {
@@ -82,10 +82,10 @@
       height: 60px;
       padding: 0px;
       border-radius: 4px;
-      border: solid black 1px;
+      border: solid yellow 1px;
       font-size: 32px;
-      background-color: darkgreen;
-      color: yellow;
+      background-color: #005500;
+      color: #e5e500;
     }
     
     .equals {
@@ -105,23 +105,26 @@
     
     
     .button:active {
-      background-color: yellow;
-      color: darkgreen;
-      box-shadow: 0 5px #666;
+      background-color: #006400;
+      color: #226600;
+      -webkit-text-stroke: 1px yellow;
+      box-shadow: 0 2px #006600;
       transform: translateY(2px);
     }
     
     .operations:active {
-      background-color: yellow;
-      color: darkgreen;
-      box-shadow: 0 5px #666;
+      background-color: #006400;
+      color: #006600;
+      -webkit-text-stroke: 1px yellow;
+      box-shadow: 0 2px #006600;
       transform: translateY(2px);
     }
     
     .clear:active {
-      background-color: yellow;
-      color: darkgreen;
-      box-shadow: 0 5px #666;
+      background-color: #006400;
+      color: #006600;
+      -webkit-text-stroke: 1px yellow;
+      box-shadow: 0 2px #006600;
       transform: translateY(2px);
     }
     
