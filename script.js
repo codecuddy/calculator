@@ -7,6 +7,7 @@ var pushButton = function(button) {
 
 var display = pushButton("#screen"),
     equals = pushButton("#equals"),
+    percent = pushButton("#percent"),
     numbers = pushButton(".button"),
     operators = pushButton(".operations"),
     clearScreen = pushButton("#clear"),
@@ -25,6 +26,8 @@ var clearEntry = function() {
 
 clearScreen.onclick = clearEntry;
     
+    
+    
 //Enter the first number 
 var setNumber = function() {
     if (answer) {
@@ -37,11 +40,11 @@ var setNumber = function() {
     display.innerHTML = currentNumber.substr(0, 14);
 };
 
-
 //Click button to enter number
 for (var i = 0, j = numbers.length; i < j; i++) {
     numbers[i].onclick = setNumber;
 }
+
 
 
 // Save number when you click operator
@@ -52,6 +55,10 @@ var saveNumber = function() {
     
     equals.setAttribute("data-answer","");
 };
+
+
+
+
 
 //Click operator button to do math
 for (var i = 0, j = operators.length; i < j; i++) {
@@ -80,9 +87,13 @@ var mathAnswer = function() {
             answer = previousNumber * currentNumber;
             break;
             
-        case "module":
-            answer = previousNumber % currentNumber;
+        case "percentage":
+            answer = previousNumber / 100;
             break;
+            
+        //case "plusMinus":
+        //    answer = previousNumber * -1;
+        //    break;
             
         default:
             answer = currentNumber;
