@@ -149,17 +149,14 @@
     }  
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-      
+
       .button:active {
       background-color: #006400;
       color: #226600;
       -webkit-text-stroke: 1px yellow;
       box-shadow: 0 2px #006600;
+      -ms-transform: translateY(2px);
+      -webkit-transform: translateY(2px);
       transform: translateY(2px);
     }
     
@@ -168,6 +165,8 @@
       color: #006600;
       -webkit-text-stroke: 1px yellow;
       box-shadow: 0 2px #006600;
+      -ms-transform: translateY(2px);
+      -webkit-transform: translateY(2px);
       transform: translateY(2px);
     }
     
@@ -176,6 +175,8 @@
       color: #006600;
       -webkit-text-stroke: 1px yellow;
       box-shadow: 0 2px #006600;
+      -ms-transform: translateY(2px);
+      -webkit-transform: translateY(2px);
       transform: translateY(2px);
     }
   }
