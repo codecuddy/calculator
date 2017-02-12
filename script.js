@@ -71,19 +71,21 @@ var oppositeSign = function() {
     currentNumber = negativeNumber;
     answer = currentNumber;
     display.innerHTML = answer;
-}
+};
 
 plusMinus.onclick = oppositeSign;
 
 
+// Display percentage 
 var percentage = function() {
     percentNumber = currentNumber / 100; 
     currentNumber = percentNumber;
     answer = percentNumber;
     display.innerHTML = answer;
-}  
+};  
 
 percent.onclick = percentage;
+
 
 // Calculate answer when equals is entered
 var mathAnswer = function() {
@@ -114,8 +116,9 @@ var mathAnswer = function() {
         default:
             answer = currentNumber;
     }
-  
-    display.innerHTML = answer;
+    var stringAnswer;
+    stringAnswer = answer.toString();
+    display.innerHTML = stringAnswer.substr(0, 14);
     equals.setAttribute("data-answer", answer);
 
     previousNumber = 0;
