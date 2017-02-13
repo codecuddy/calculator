@@ -154,7 +154,18 @@
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
 
-  .operations:active {
-    background-color: blue;
-  }
+    .button:active {
+      color: #008800;
+      background-color: #226600;
+    }
+    
+    .operations:active {
+      color: #008800;
+      background-color: #006600;
+    }
+    
+    .clear:active {
+      color: #008800;
+      background-color: #006600;
+    }
   }

@@ -1,3 +1,5 @@
+document.addEventListener("touchstart", function() {},false);
+
 var pushButton = function(button) {
     if (button.charAt(0) === "#") {
         return document.querySelector(button);  // if it gets an id return that button
