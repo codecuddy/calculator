@@ -24,12 +24,6 @@
     
     .container {
       height: 60vh;
-      margin: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      
     }
     
     .headline {

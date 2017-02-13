@@ -8,22 +8,11 @@ var pushButton = function(button) {
         return document.querySelectorAll(button);   // Otherwise, return a list (???)
     };
 
-var display = pushButton("#screen"),
-    equals = pushButton("#equals"),
-    percent = pushButton("#percent"),
-    plusMinus = pushButton("#plusMinus"),
-    numbers = pushButton(".button"),
-    operators = pushButton(".operations"),
-    clearScreen = pushButton("#clear"),
-    currentNumber = "",
-    previousNumber = "",
-    answer,
-    negativeNumber,
-    percentNumber,
-    doMath;
-  
-    
 //Clear the display
+var currentNumber = "",
+    previousNumber = "", 
+    display = pushButton("#screen"),
+    clearScreen = pushButton("#clear");
 var clearEntry = function() {
     currentNumber = "";
     previousNumber = "";
@@ -34,6 +23,7 @@ clearScreen.onclick = clearEntry;
     
 
 //Enter the first number 
+var answer;
 var setNumber = function() {
     if (answer) {
         currentNumber = this.getAttribute("data-number");
@@ -46,28 +36,33 @@ var setNumber = function() {
 };
 
 //Click button to enter number
+var numbers = pushButton(".button");
 for (var i = 0, j = numbers.length; i < j; i++) {
     numbers[i].onclick = setNumber;
 }
 
 
 // Save number when you click operator
+var doMath,
+    equals = pushButton("#equals");
 var saveNumber = function() {
     previousNumber = currentNumber;
     currentNumber = "";
     doMath = this.getAttribute("data-operations");
-    
     equals.setAttribute("data-answer","");
 };
 
 
 //Click operator button to do math
+var operators = pushButton(".operations");
 for (var i = 0, j = operators.length; i < j; i++) {
     operators[i].onclick = saveNumber;
 }
 
 
 //Allow positive and negative numbers
+var plusMinus = pushButton("#plusMinus"),
+    negativeNumber;
 var oppositeSign = function() {
     negativeNumber = currentNumber * -1;
     currentNumber = negativeNumber;
@@ -81,6 +76,8 @@ plusMinus.onclick = oppositeSign;
 
 
 // Display percentage 
+var percent = pushButton("#percent"),
+    percentNumber;
 var percentage = function() {
     percentNumber = currentNumber / 100; 
     currentNumber = percentNumber;
@@ -112,11 +109,7 @@ var mathAnswer = function() {
         case "multiply":
             answer = previousNumber * currentNumber;
             break;
-            
-        //case "percentage":
-        //    answer = previousNumber / 100;
-        //    break;
-            
+
         default:
             answer = currentNumber;
     }
