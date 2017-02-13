@@ -1,3 +1,4 @@
+//allow active suedoclass to work on mobile
 document.addEventListener("touchstart", function() {},false);
 
 var pushButton = function(button) {
@@ -20,6 +21,7 @@ var display = pushButton("#screen"),
     negativeNumber,
     percentNumber,
     doMath;
+  
     
 //Clear the display
 var clearEntry = function() {
@@ -49,7 +51,6 @@ for (var i = 0, j = numbers.length; i < j; i++) {
 }
 
 
-
 // Save number when you click operator
 var saveNumber = function() {
     previousNumber = currentNumber;
@@ -58,7 +59,6 @@ var saveNumber = function() {
     
     equals.setAttribute("data-answer","");
 };
-
 
 
 //Click operator button to do math
@@ -138,124 +138,4 @@ var mathAnswer = function() {
     currentNumber = answer;  
 };
 
-
 equals.onclick = mathAnswer;
-
-
-
-
-
-/*
-var numbers = {
-    displayZero: function() {
-    var button = document.getElementById("zero").value;
-    var display = document.getElementById("screen").innerHTML = button;
-    var entry = display.value;
-        
-    },
-    
-    displayOne: function() {
-    var button = document.getElementById("one").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    displayTwo: function() {
-    var button = document.getElementById("two").value;
-    document.getElementById("screen").innerHTML = button;""
-    },
-    
-    displayThree: function() {
-    var button = document.getElementById("three").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    displayFour: function() {
-    var button = document.getElementById("four").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    displayFive: function() {
-    var button = document.getElementById("five").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    displaySix: function() {
-    var button = document.getElementById("six").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    displaySeven: function() {
-    var button = document.getElementById("seven").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    displayEight: function() {
-    var button = document.getElementById("eight").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    displayNine: function() {
-    var button = document.getElementById("nine").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    displayDecimal: function() {
-    var button = document.getElementById("decimal").value;
-    document.getElementById("screen").innerHTML = button;
-    }
-};
-
-
-var operators = {
-    clearAll: function() {
-    var button = document.getElementById("clearAll").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    plusMinus: function() {
-    var button = document.getElementById("plusMinus").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    percent: function() {
-    var button = document.getElementById("percent").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    divide: function() {
-    var button = document.getElementById("divide").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    multiply: function() {
-    var button = document.getElementById("multiply").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    minus: function() {
-    var button = document.getElementById("minus").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    add: function() {
-    var button = document.getElementById("add").value;
-    document.getElementById("screen").innerHTML = button;
-    },
-    
-    equal: function() {
-    var button = document.getElementById("equal").value;
-    document.getElementById("screen").innerHTML = button;
-    }
-}
-
-
-
-/*
-var display = {
-    displayScreen: function(buttons) {
-    var button = document.getElementById().value;
-    document.getElementById("screen").innerHTML = button;
-    }
-}
-
-*/
